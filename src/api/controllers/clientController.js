@@ -1,9 +1,6 @@
-
-
 const clientController = async (req, res) => {
   try {
-    const { name, cpf } = req.body;
-    
+    return res.status(200).end();
   } catch (error) {
     return res.status(400).json({ message: error.message });
   }

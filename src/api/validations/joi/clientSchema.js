@@ -1,10 +1,13 @@
 const Joi = require('joi');
 
-const clientSchema = Joi.object({
-  fullName: Joi.string()
+module.exports = Joi.object({
+  name: Joi
+    .string()
+    .min(3)
+    .required(),
+  cpf: Joi
+    .number()
+    .min(11)
+    .max(11)
     .required()
-    .min(3),
-  cpf: Joi.required()
 });
-
-module.exports = clientSchema;

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const clientSchema = new mongoose.Schema({
-  name: String,
+  fullName: String,
   cpf: Number,
   balance: Number,
 })
