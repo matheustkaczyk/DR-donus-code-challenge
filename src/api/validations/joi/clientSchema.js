@@ -6,8 +6,7 @@ module.exports = Joi.object({
     .min(3)
     .required(),
   cpf: Joi
-    .number()
-    .min(11)
-    .max(11)
+    .string()
+    .length(11)
     .required()
 });

@@ -11,7 +11,7 @@ const clientValidation = (req, res, next) => {
       next();
       
     } catch (error) {
-      res.status(404).json({ message: error.message });
+      res.status(400).json({ message: error.message });
     }
 };
 

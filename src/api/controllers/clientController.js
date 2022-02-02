@@ -1,6 +1,11 @@
+const { createClientService } = require('../services/clientService');
+
 const clientController = async (req, res) => {
   try {
-    return res.status(200).end();
+    const { fullName, cpf } = req.body;
+
+    await createClientService(fullName, cpf);
+    return res.status(201).end();
   } catch (error) {
     return res.status(400).json({ message: error.message });
   }
