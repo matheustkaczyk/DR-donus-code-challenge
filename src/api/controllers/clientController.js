@@ -16,11 +16,12 @@ const clientLogin = async (req, res) => {
   try {
     const { fullName, cpf } = req.body;
 
-    const user = await loginClientService(fullName, cpf);
+    const loginRequest = await loginClientService(fullName, cpf);
+    const { balance } = loginRequest[0];
 
-    return res.status(200).json(jwtSignature(user));
+    return res.status(200).json(jwtSignature({ fullName, cpf, balance }));
   } catch (error) {
-    return res.status(400).end();
+    return res.status(400).json({ message: error.message });
   }
 };
 

@@ -18,12 +18,14 @@ const getClient = async (fullName, cpf) => {
   }
 };
 
-const depositClient = async (quantity) => {
+const depositClient = async (cpf, quantity) => {
   try {
-    
+    const depositing = clientsModel.findOneAndUpdate({ cpf }, { balance: balance + quantity })
+
+    return depositing;
   } catch (error) {
     return error;
   }
 };
 
-module.exports = { createClient, getClient };
+module.exports = { createClient, getClient, depositClient };

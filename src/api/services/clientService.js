@@ -13,7 +13,7 @@ const createClientService = async (fullName, cpf) => {
 const loginClientService = async (fullName, cpf) => {
   const doesExist = await getClient(fullName, cpf);
 
-  if (doesExist.length > 0) throw new Error(`User not found`);
+  if (doesExist.length < 0) throw new Error(`User not found`);
 
   return doesExist;
 };
