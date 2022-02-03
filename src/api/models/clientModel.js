@@ -18,4 +18,12 @@ const getClient = async (fullName, cpf) => {
   }
 };
 
+const depositClient = async (quantity) => {
+  try {
+    
+  } catch (error) {
+    return error;
+  }
+};
+
 module.exports = { createClient, getClient };
