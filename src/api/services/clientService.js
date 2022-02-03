@@ -10,4 +10,12 @@ const createClientService = async (fullName, cpf) => {
   return creating;
 };
 
-module.exports = { createClientService };
+const loginClientService = async (fullName, cpf) => {
+  const doesExist = await getClient(fullName, cpf);
+
+  if (doesExist.length > 0) throw new Error(`User not found`);
+
+  return doesExist;
+};
+
+module.exports = { createClientService, loginClientService };
