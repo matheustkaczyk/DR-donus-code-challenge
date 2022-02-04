@@ -9,9 +9,9 @@ const createClient = async (fullName, cpf) => {
   }
 };
 
-const getClient = async (fullName, cpf) => {
+const getClient = async (cpf) => {
   try {
-    const getClient = await clientsModel.find({ fullName, cpf });
+    const getClient = await clientsModel.find({ cpf });
     return getClient;
   } catch (error) {
     return error;
@@ -20,7 +20,7 @@ const getClient = async (fullName, cpf) => {
 
 const depositClient = async (cpf, quantity) => {
   try {
-    const depositing = clientsModel.findOneAndUpdate({ cpf }, { balance: balance + quantity })
+    const depositing = await clientsModel.findOneAndUpdate({ cpf }, { balance: quantity });
 
     return depositing;
   } catch (error) {

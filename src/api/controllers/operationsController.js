@@ -5,8 +5,8 @@ const deposit = async (req, res) => {
     const { quantity } = req.params;
     const { cpf } = req.user;
 
-    await depositService(cpf, quantity);
-    res.status(200).end();
+    const depositing = await depositService(cpf, quantity);
+    res.status(200).json(depositing);
   } catch (error) {
     return res.status(400).json({ message: error.message });
   }

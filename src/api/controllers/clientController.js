@@ -16,7 +16,7 @@ const clientLogin = async (req, res) => {
   try {
     const { fullName, cpf } = req.body;
 
-    const loginRequest = await loginClientService(fullName, cpf);
+    const loginRequest = await loginClientService(cpf);
     const { balance } = loginRequest[0];
 
     return res.status(200).json(jwtSignature({ fullName, cpf, balance }));
