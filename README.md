@@ -1,5 +1,7 @@
 # DR-donus-code-challenge
 
+Desafio técnico para a empresa Digital Republic, construiu-se uma API de operações bancárias, onde se pode criar uma conta, efetuar depósitos e transferências entre clientes.
+
 Para iniciar o API você deve:
 1. Clonar o repositório
 * `git@github.com:matheustkaczyk/DR-donus-code-challenge.git`
