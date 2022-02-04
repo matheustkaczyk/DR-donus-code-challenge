@@ -16,6 +16,4 @@ app.post('/client', validateJWT, clientValidation, clientCreation)
 app.post('/client/:quantity', validateJWT, depositValidation, deposit);
 app.post('/client/:quantity/:targetCpf', validateJWT, transfer);
 
-app.get('/', (_req, res) => res.status(200).end());
-
 module.exports = app;

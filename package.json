@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +13,7 @@
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
   }
 }

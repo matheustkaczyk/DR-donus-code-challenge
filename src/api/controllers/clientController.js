@@ -6,7 +6,7 @@ const clientCreation = async (req, res) => {
     const { fullName, cpf } = req.body;
 
     await createClientService(fullName, cpf);
-    return res.status(201).end();
+    return res.status(201).json({ message: 'User successfully created' });
   } catch (error) {
     return res.status(400).json({ message: error.message });
   }
