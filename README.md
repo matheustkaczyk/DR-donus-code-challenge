@@ -18,6 +18,7 @@ Para iniciar o API você deve:
 
 * Payload
 `
+Ex: 
 {
   "fullName": "Joao Teste",
   "cpf": "12345678901"
@@ -29,8 +30,21 @@ Para iniciar o API você deve:
 
 * Payload
 `
+Ex: 
 {
   "fullName": "Joao Teste",
   "cpf": "12345678901"
 }
 `
+
+3. Depósito
+`POST /client/*quantidade*`
+
+* Payload
+`Ex: /client/2000`
+
+4. Transferência
+`POST /client/*quantidade*/*cpfAlvo*`
+
+* Payload
+`Ex: /client/2000/12345678901`
