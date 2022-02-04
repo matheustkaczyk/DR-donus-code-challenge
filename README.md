@@ -23,3 +23,14 @@ Para iniciar o API você deve:
   "cpf": "12345678901"
 }
 `
+
+2. Login do usuário
+`POST /login`
+
+2.1 Payload
+`
+{
+  "fullName": "Joao Teste",
+  "cpf": "12345678901"
+}
+`
