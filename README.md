@@ -15,6 +15,7 @@ Para iniciar o API você deve:
 # ENDPOINTS
 1. Criação de usuário
 `POST /client`
+
 1.1 Payload
 `
 {
