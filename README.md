@@ -16,7 +16,7 @@ Para iniciar o API você deve:
 1. Criação de usuário
 `POST /client`
 
-1.1 Payload
+* Payload
 `
 {
   "fullName": "Joao Teste",
@@ -27,7 +27,7 @@ Para iniciar o API você deve:
 2. Login do usuário
 `POST /login`
 
-2.1 Payload
+* Payload
 `
 {
   "fullName": "Joao Teste",
